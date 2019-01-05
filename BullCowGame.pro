@@ -9,3 +9,6 @@ SOURCES += \
 
 HEADERS += \
     FBullCowGame.h
+
+DISTFILES += \
+    README.md
