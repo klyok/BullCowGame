@@ -28,8 +28,7 @@ private:
     int32 MyCurrentTry; // see constructor for initialization
     int32 MyMaxTries;
     bool IsIsogram(FString);
-    BullCowCount SubmitGuess(FString);
-
+    FString MyHiddenWord;
 };
 
 
