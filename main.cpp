@@ -1,3 +1,8 @@
+/* This is console executable that makes use of FBullCowGame class.
+ * This acts as the view in MVC pattern, and is responsible for
+ * all user interaction. For game logic see the FBullCowGame class.
+*/
+
 #include <iostream>
 #include "FBullCowGame.h"
 
