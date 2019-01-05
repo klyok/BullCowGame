@@ -18,7 +18,6 @@ int main()
     {
         PrintIntro();
         PlayGame();
-        // TODO add a game summary
         bPlayAgain = AskToPlayAgain();
     }
     while (bPlayAgain);
@@ -52,6 +51,9 @@ void PlayGame()
         std::cout << "Your guess is: " << Guess << std::endl;
         std::cout << std::endl;
     }
+
+    // TODO summarize a game
+
 }
 
 // get a guess from the player and print it back
