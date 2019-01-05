@@ -19,7 +19,7 @@ bool FBullCowGame::IsGameWon() const
     return 0;
 }
 
-bool FBullCowGame::CheckGuessValidity(std::string)
+bool FBullCowGame::CheckGuessValidity(FString)
 {
     return 0;
 }
