@@ -4,6 +4,12 @@
 using FString = std::string;
 using int32 = int;
 
+struct BullCowCount
+{
+    int32 Bulls = 0;
+    int32 Cows = 0;
+};
+
 class FBullCowGame {
 public:
     FBullCowGame(); // constructor
@@ -22,7 +28,7 @@ private:
     int32 MyCurrentTry; // see constructor for initialization
     int32 MyMaxTries;
     bool IsIsogram(FString);
-    // provide a method for counting bulls and cows and increasing try
+    BullCowCount SubmitGuess(FString);
 
 };
 
