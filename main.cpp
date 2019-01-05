@@ -7,6 +7,7 @@
 #include "FBullCowGame.h"
 
 using FText = std::string;
+using int32 = int;
 
 void PrintIntro();
 void PlayGame();
@@ -34,7 +35,7 @@ int main()
 // introduce the game
 void PrintIntro()
 {
-    constexpr int WORD_LENGTH = 5;
+    constexpr int32 WORD_LENGTH = 5;
     std::cout << "Welcome to Cows and Bulls, a fun world game.\n";
     std::cout << "Can you guess the ";
     std::cout << WORD_LENGTH;
@@ -47,13 +48,13 @@ void PlayGame()
 {
     BCGame.Reset();
 
-    int MaxTries = BCGame.GetMaxTries();
+    int32 MaxTries = BCGame.GetMaxTries();
     std::cout << MaxTries << std::endl;
 
     // loop for the number of turns asking for guesses
     // TODO change for FOR to WHILE loop once we are validating tries
-    constexpr int NUMBER_OF_TURNS = 5;
-    for (int count = 1; count <= MaxTries; count++)
+    constexpr int32 NUMBER_OF_TURNS = 5;
+    for (int32 count = 1; count <= MaxTries; count++)
     {
         FText Guess = GetGuess(); // TODO make loop checking valid guesses
 
@@ -73,7 +74,7 @@ FText GetGuess()
 {
     // get a guess from the player
     FText Guess = "";
-    int CurrentTry = BCGame.GetCurrentTry();
+    int32 CurrentTry = BCGame.GetCurrentTry();
     std::cout << "Try " << CurrentTry << ". Please enter your guess: ";
     getline(std::cin, Guess);
     return Guess;
