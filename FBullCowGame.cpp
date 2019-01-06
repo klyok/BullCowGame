@@ -6,6 +6,7 @@ FBullCowGame::FBullCowGame() { Reset(); }
 
 int32 FBullCowGame::GetMaxTries() const { return MyMaxTries; }
 int32 FBullCowGame::GetCurrentTry() const { return MyCurrentTry; }
+int32 FBullCowGame::GetHiddenWordLength() const { return MyHiddenWord.length(); }
 
 void FBullCowGame::Reset()
 {
@@ -24,10 +25,6 @@ bool FBullCowGame::IsGameWon() const
     return 0;
 }
 
-int32 FBullCowGame::GetHiddenWordLength() const
-{
-    return MyHiddenWord.length();
-}
 
 bool FBullCowGame::CheckGuessValidity(FString) const
 {
