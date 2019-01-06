@@ -33,7 +33,7 @@ int main()
 // introduce the game
 void PrintIntro()
 {
-    std::cout << "Welcome to Cows and Bulls, a fun world game.\n";
+    std::cout << "Welcome to Cows and Bulls, a fun word game.\n";
     std::cout << "Can you guess the ";
     std::cout << BCGame.GetHiddenWordLength();
     std::cout << " letter isogram I'm thinking of?\n";
