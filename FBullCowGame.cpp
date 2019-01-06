@@ -12,7 +12,7 @@ void FBullCowGame::Reset()
     constexpr int32 MAX_TRIES = 8;
     MyMaxTries = MAX_TRIES;
 
-    const FString HIDDEN_WORD = "planet";
+    const FString HIDDEN_WORD = "ant";
     MyHiddenWord = HIDDEN_WORD;
 
     MyCurrentTry = 1;
@@ -41,14 +41,14 @@ FBullCowCount FBullCowGame::SubmitGuess(FString Guess)
 
     // loop through all letters in the guess
     int HiddenWordLength = MyHiddenWord.length();
-    for (int32 i = 0; i < HiddenWordLength; i++)
+    for (int32 MHWChar = 0; MHWChar < HiddenWordLength; MHWChar++)
     {
         // compare letters against the hidden words
-        for (int32 j = 0; j < HiddenWordLength; j++)
+        for (int32 GChar = 0; GChar < HiddenWordLength; GChar++)
         {
-            if (Guess[i] == MyHiddenWord[i]) // if they match then
+            if (Guess[MHWChar] == MyHiddenWord[MHWChar]) // if they match then
             {
-                if (j == i) // if they are in the same place
+                if (GChar == MHWChar) // if they are in the same place
                 {
                     BullCowCount.Bulls++; // increment bulls
                 } else
