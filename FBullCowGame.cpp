@@ -24,7 +24,12 @@ bool FBullCowGame::IsGameWon() const
     return 0;
 }
 
-bool FBullCowGame::CheckGuessValidity(FString)
+int32 FBullCowGame::GetHiddenWordLength() const
+{
+    return MyHiddenWord.length();
+}
+
+bool FBullCowGame::CheckGuessValidity(FString) const
 {
     return 0;
 }

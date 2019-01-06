@@ -33,10 +33,9 @@ int main()
 // introduce the game
 void PrintIntro()
 {
-    constexpr int32 WORD_LENGTH = 5;
     std::cout << "Welcome to Cows and Bulls, a fun world game.\n";
     std::cout << "Can you guess the ";
-    std::cout << WORD_LENGTH;
+    std::cout << BCGame.GetHiddenWordLength();
     std::cout << " letter isogram I'm thinking of?\n";
     std::cout << std::endl;
     return;
@@ -50,7 +49,6 @@ void PlayGame()
 
     // loop for the number of turns asking for guesses
     // TODO change for FOR to WHILE loop once we are validating tries
-    constexpr int32 NUMBER_OF_TURNS = 5;
     for (int32 count = 1; count <= MaxTries; count++)
     {
         FText Guess = GetGuess(); // TODO make loop checking valid guesses
