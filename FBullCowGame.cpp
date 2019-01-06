@@ -46,7 +46,7 @@ FBullCowCount FBullCowGame::SubmitGuess(FString Guess)
         // compare letters against the hidden words
         for (int32 GChar = 0; GChar < HiddenWordLength; GChar++)
         {
-            if (Guess[MHWChar] == MyHiddenWord[MHWChar]) // if they match then
+            if (Guess[GChar] == MyHiddenWord[MHWChar]) // if they match then
             {
                 if (GChar == MHWChar) // if they are in the same place
                 {
