@@ -28,14 +28,19 @@ bool FBullCowGame::IsGameWon() const
 
 EGuessStatus FBullCowGame::CheckGuessValidity(FString) const
 {
-    // if the guess isn't an isogram
-        // return an error
-    // if the guess isn't all lowercase
-        // return an error
-    // if the guess length is wrong
-        // return an error
-    // otherwise
-        // return OK
+    if (false) // if the guess isn't an isogram
+    {
+        return EGuessStatus::Not_Isogram;
+    } else if (false) // if the guess isn't all lowercase
+    {
+        return EGuessStatus::Not_Lowercase;
+    } else if (false) // if the guess length is wrong
+    {
+        return EGuessStatus::Wrong_Length;
+    } else
+    {
+        return EGuessStatus::OK;
+    }
 }
 
 
