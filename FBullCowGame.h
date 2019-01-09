@@ -11,6 +11,12 @@ struct FBullCowCount
     int32 Cows = 0;
 };
 
+enum EWordStatus
+{
+    OK,
+    Not_Isogram
+};
+
 class FBullCowGame {
 public:
     FBullCowGame(); // constructor
