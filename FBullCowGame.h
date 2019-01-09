@@ -14,7 +14,9 @@ struct FBullCowCount
 enum class EWordStatus
 {
     OK,
-    Not_Isogram
+    Not_Isogram,
+    Wrong_Length,
+    Not_Lowercase
 };
 
 class FBullCowGame {
