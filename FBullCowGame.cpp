@@ -26,7 +26,7 @@ bool FBullCowGame::IsGameWon() const
 }
 
 
-EWordStatus FBullCowGame::CheckGuessValidity(FString) const
+EGuessStatus FBullCowGame::CheckGuessValidity(FString) const
 {
     // if the guess isn't an isogram
         // return an error
