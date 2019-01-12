@@ -67,12 +67,12 @@ void PlayGame()
 FText GetValidGuess()
 {
     EGuessStatus Status = EGuessStatus::Invalid;
+    FText Guess = "";
     do
     {
         // get a guess from the player
         int32 CurrentTry = BCGame.GetCurrentTry();
         std::cout << "Try " << CurrentTry << ". Please enter your guess: ";
-        FText Guess = "";
         std::getline(std::cin, Guess);
 
         Status = BCGame.CheckGuessValidity(Guess);
@@ -88,10 +88,12 @@ FText GetValidGuess()
             std::cout << "Please enter all lowercase letters.\n";
             break;
         default:
-            return Guess;
+            // assume the guess is valid
+            break;
         }
     std::cout << std::endl;
     } while (Status != EGuessStatus::OK); // keep looping until we get no errors
+    return Guess;
 }
 
 
