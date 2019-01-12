@@ -110,7 +110,7 @@ void PrintGameSummary(){
 
 bool AskToPlayAgain()
 {
-    std::cout << "Do you want to play again? (y/n) ";
+    std::cout << "Do you want to play again with the same word? (y/n) ";
     FText Response = "";
     getline (std::cin, Response);
     return (Response[0] == 'y') || (Response[0] == 'Y');
