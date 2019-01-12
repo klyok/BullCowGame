@@ -61,7 +61,7 @@ void PlayGame()
     }
 
     // TODO summarize a game
-
+    return;
 }
 
 // loop continually until the player gives a valid guess
