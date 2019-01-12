@@ -32,7 +32,7 @@ public:
     EGuessStatus CheckGuessValidity(FString) const; // TODO make a more rich return value
 
     void Reset(); // TODO make a more rich return value
-    FBullCowCount SubmitGuess(FString Guess);
+    FBullCowCount SubmitValidGuess(FString Guess);
 
     // TODO provide methods for changing MyMaxTries
 
