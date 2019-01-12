@@ -27,8 +27,8 @@ public:
     int32 GetMaxTries() const;
     int32 GetCurrentTry() const;
     int32 GetHiddenWordLength() const;
-
     bool IsGameWon() const;
+
     EGuessStatus CheckGuessValidity(FString) const; // TODO make a more rich return value
 
     void Reset(); // TODO make a more rich return value
@@ -41,6 +41,7 @@ private:
     int32 MyCurrentTry; // see constructor for initialization
     int32 MyMaxTries;
     bool IsIsogram(FString);
+    bool bGameIsWon;
     FString MyHiddenWord;
 };
 
